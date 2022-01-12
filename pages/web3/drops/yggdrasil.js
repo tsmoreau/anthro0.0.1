@@ -3,6 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Account from "../../../components/Utils/Account";
 import Nav from "../../../components/Layout/Nav";
+import Alert from "../../../components/Layout/Alert";
+
 import Footer from "../../../components/Layout/Footer";
 import useEagerConnect from "../../../hooks/useEagerConnect";
 
@@ -40,7 +42,6 @@ export default function Home() {
         <title>Anthromancer - Yggdrasil</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Nav />
       <div className=" bg-black text-white">
         <div className="w-screen flex">
@@ -48,8 +49,8 @@ export default function Home() {
             id="scroller"
             className="snap-y snap-mandatory w-full lg:w-8/12 h-screen lg:h-156 overflow-scroll"
           >
-            <div className="lg:hidden flex snap-start  bg-black w-full h-screen lg:h-156  flex-col text-center items-center justify-center text-base px-3 ">
-              <div className="w-8/12 flex mx-auto rounded-lg -translate-y-16">
+            <div className="lg:hidden flex snap-center  bg-black w-full h-screen lg:h-156  flex-col text-center items-center justify-center text-base px-3 ">
+              <div className="w-8/12 flex mx-auto rounded-lg -translate-y-8">
                 <img id="NFT" src="/yggdrasil.png" />
               </div>
               <p className="text-3xl font-bold -translate-y-3">∞. Yggdrasil</p>
@@ -76,8 +77,8 @@ export default function Home() {
                 </p>
               </p>
             </div>
-            <div className=" snap-start  bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
-              <div className="-translate-y-16 w-full ">
+            <div className=" snap-center  bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-16 w-full ">
                 <p className="text-3xl leading-tight lg:leading-relaxed font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   The Beginning
                 </p>
@@ -110,7 +111,7 @@ export default function Home() {
                   Thank you.
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="mt-4">
                 <p className=" text-lg font-bold">How to Get Started...</p>
 
                 <svg
@@ -118,7 +119,7 @@ export default function Home() {
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
-                  className="flex mx-auto mt-4 translate-y-0 animate-bounce"
+                  className="flex mx-auto mt-4  "
                   stroke="#67e8f9"
                   strokeWidth="3px"
                 >
@@ -126,13 +127,13 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className=" snap-start bg-black w-full  h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
-              <div className="-mt-8 w-full ">
-                <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
+            <div className="snap-center bg-black w-full  h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-24 w-full">
+                <p className=" text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   How to Get Started
                 </p>
 
-                <div className="border mt-3">
+                <div className="mt-3">
                   <YoutubeEmbed embedId="rokGy0huYEA" />
                 </div>
               </div>
@@ -144,7 +145,7 @@ export default function Home() {
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
-                  className="flex mx-auto mt-4 translate-y-0 animate-bounce"
+                  className="flex mx-auto mt-4  "
                   stroke="#67e8f9"
                   strokeWidth="3px"
                 >
@@ -152,7 +153,7 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className=" snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+            <div className=" snap-center bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
               <div className="-mt-12 w-full leading-tight lg:leading-relaxed">
                 <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   The Steps
@@ -161,7 +162,7 @@ export default function Home() {
                 <p className="pt-6 text-xl font-bold text-left left-0">
                   1) Setup Your Metamask
                 </p>
-                <p className="px-2 lg:px-6 pt-3 text-base">
+                <p className="-px-1 lg:px-6 pt-3 text-base leading-tight lg:leading-relaxed">
                   Download and install the Metamask browser extension. You can
                   do so by navigating to the Metamask website and following the
                   instructions from this ONE37pm article here. After you set up
@@ -176,14 +177,14 @@ export default function Home() {
                 <p className="pt-6 text-xl font-bold text-left left-0">
                   2) Connect to this Site
                 </p>
-                <p className="px-2 lg:px-6 pt-3">
+                <p className="-px-1 lg:px-6 pt-3">
                   When you wallet is set up, connect it to our website using the
                   'Connect Wallet' button (top right).
                 </p>
                 <p className="pt-6 text-xl font-bold text-left left-0">
                   3) Claim your NFT
                 </p>
-                <p className="px-2 lg:px-6 pt-3">
+                <p className="-px-1 lg:px-6 pt-3">
                   Click 'Claim Your NFT', and sign the transaction using your
                   metamask wallet. The token will be automatically transferred
                   into your account. It may take up to 10 minutes for this
@@ -203,7 +204,7 @@ export default function Home() {
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
-                  className="flex mx-auto mt-4 translate-y-0 animate-bounce"
+                  className="flex mx-auto mt-4  "
                   stroke="#67e8f9"
                   strokeWidth="3px"
                 >
@@ -211,8 +212,8 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className=" snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
-              <div className="-mt-12 w-full">
+            <div className=" snap-center bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-12 w-full flex flex-col mx-auto text-center justify-center">
                 <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   The Claim Button
                 </p>
@@ -220,16 +221,19 @@ export default function Home() {
                   Please Enter your Claim Code from Email below.
                 </p>
                 <input type="text" className="" />
+                <div className="mt-4 mx-auto bg-yggpurple-300 w-48 justify-center text-center px-4 py-1.5 border rounded-lg">
+                  Redeem Code
+                </div>
               </div>
               <div className="mt-8">
-                <p className=" text-lg font-bold">Congratulations!!!</p>
+                <p className=" text-lg font-bold">Now What?!</p>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
-                  className="flex mx-auto mt-4 translate-y-0 animate-bounce"
+                  className="flex mx-auto mt-4  "
                   stroke="#67e8f9"
                   strokeWidth="3px"
                 >
@@ -237,7 +241,7 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className=" snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+            <div className=" snap-center bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
               <div className="-mt-12 w-full ">
                 <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   Congratulations! Now What?
@@ -280,7 +284,7 @@ export default function Home() {
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
-                  className="flex mx-auto mt-4 translate-y-0 animate-bounce"
+                  className="flex mx-auto mt-4  "
                   stroke="#67e8f9"
                   strokeWidth="3px"
                 >
@@ -288,7 +292,7 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className="snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+            <div className="snap-center bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
               <div className="-mt-8 w-full ">
                 <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   What's Next for Anthromancer?
@@ -320,7 +324,7 @@ export default function Home() {
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
-                  className="flex mx-auto mt-4 translate-y-0 animate-bounce"
+                  className="flex mx-auto mt-4  "
                   stroke="#67e8f9"
                   strokeWidth="3px"
                 >
@@ -357,7 +361,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
 
       <style jsx>{`
         nav {
