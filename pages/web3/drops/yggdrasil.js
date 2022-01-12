@@ -12,8 +12,8 @@ import PropTypes from "prop-types";
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
     <iframe
-      width="640"
-      height="320"
+      width="100%"
+      height="100%"
       src={`https://www.youtube.com/embed/${embedId}`}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -42,20 +42,45 @@ export default function Home() {
       </Head>
 
       <Nav />
-      <div className="bg-black text-white">
+      <div className=" bg-black text-white">
         <div className="w-screen flex">
           <div
             id="scroller"
-            className="snap-y snap-mandatory w-8/12 h-156 overflow-scroll"
+            className="snap-y snap-mandatory w-full lg:w-8/12 h-screen lg:h-156 overflow-scroll"
           >
-            <div className="relative snap-start  bg-black w-full h-156 flex flex-col text-center items-center justify-center text-base px-36">
-              <div className="-mt-8 w-full relative">
-                <p className="text-3xl font-bold absolute -top-12 -left-6">
+            <div className="lg:hidden flex snap-start  bg-black w-full h-screen lg:h-156  flex-col text-center items-center justify-center text-base px-3 ">
+              <div className="w-8/12 flex mx-auto rounded-lg -translate-y-16">
+                <img id="NFT" src="/yggdrasil.png" />
+              </div>
+              <p className="text-3xl font-bold -translate-y-3">∞. Yggdrasil</p>
+              <p className="font-sans px-2 pt-3 text-sm -translate-y-3">
+                <p>
+                  In Norse mythology, Yggdrasil is the massive tree whose roots
+                  and branches stretch through the nine realms of time and
+                  space. The concept of a great tree on whose body rests the
+                  world, though, transcends any culture, and the
+                  four-dimensional structure of spacetime evokes a similar
+                  metaphor.
+                </p>
+
+                <p className="mt-4">
+                  We are the fruit of the tree of time, and as we are born we
+                  become its stewards. In this token we see the image of a tree
+                  appearing in front of metatron’s cube, a sacred geometric
+                  design which contains schematic information for all of the
+                  platonic solids, those mathematically perfect shapes that were
+                  once theorized to be the building blocks of reality. Yggdrasil
+                  is the icon of cosmic unity; the blend between the divine
+                  feminine chaos of nature, and the divine masculine order of
+                  math.
+                </p>
+              </p>
+            </div>
+            <div className=" snap-start  bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-translate-y-16 w-full ">
+                <p className="text-3xl leading-tight lg:leading-relaxed font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   The Beginning
                 </p>
-                <span className="bg-yggpurple-300 h-px w-60 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-60 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-60 absolute -translate-y-2 top-0 -left-6"></span>
 
                 <p className="pt-6">
                   <span className="italic">"What IS this place?"</span> Roxas
@@ -70,7 +95,7 @@ export default function Home() {
                     "The time from which ALL times begin..."
                   </span>
                 </p>
-                <p className="pt-6 leading-relaxed">
+                <p className="pt-6 ">
                   As a token of our gratitude for their support, every verified
                   backer of the 2020 Anthromancer Kickstarter Campaign is
                   eligible to claim a single limited edition “Yggdrasil” NFT,
@@ -85,7 +110,7 @@ export default function Home() {
                   Thank you.
                 </p>
               </div>
-              <div className="absolute bottom-0 -translate-y-16">
+              <div className="mt-8">
                 <p className=" text-lg font-bold">How to Get Started...</p>
 
                 <svg
@@ -101,20 +126,17 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className="relative snap-start bg-black w-full h-156 flex flex-col text-center items-center justify-center text-base px-36">
-              <div className="-mt-8 w-full relative">
-                <p className="text-3xl font-bold absolute -top-12 -left-6">
+            <div className=" snap-start bg-black w-full  h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-8 w-full ">
+                <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   How to Get Started
                 </p>
-                <span className="bg-yggpurple-300 h-px w-72 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-72 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-72 absolute -translate-y-2 top-0 -left-6"></span>
 
-                <div className="w-full border mt-3">
+                <div className="border mt-3">
                   <YoutubeEmbed embedId="rokGy0huYEA" />
                 </div>
               </div>
-              <div className="absolute bottom-0 -translate-y-16">
+              <div className="mt-8">
                 <p className=" text-lg font-bold">The Steps...</p>
 
                 <svg
@@ -130,19 +152,16 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className="relative snap-start bg-black w-full h-156 flex flex-col text-center items-center justify-center text-base px-36">
-              <div className="-mt-8 relative w-full">
-                <p className="text-3xl font-bold absolute -top-12 -left-6">
-                  The Steps.
+            <div className=" snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-12 w-full leading-tight lg:leading-relaxed">
+                <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
+                  The Steps
                 </p>
-                <span className="bg-yggpurple-300 h-px w-40 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-40 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-40 absolute -translate-y-2 top-0 -left-6"></span>
 
                 <p className="pt-6 text-xl font-bold text-left left-0">
                   1) Setup Your Metamask
                 </p>
-                <p className="px-8 pt-3 text-sm">
+                <p className="px-2 lg:px-6 pt-3 text-base">
                   Download and install the Metamask browser extension. You can
                   do so by navigating to the Metamask website and following the
                   instructions from this ONE37pm article here. After you set up
@@ -157,14 +176,14 @@ export default function Home() {
                 <p className="pt-6 text-xl font-bold text-left left-0">
                   2) Connect to this Site
                 </p>
-                <p className="px-8 pt-3">
+                <p className="px-2 lg:px-6 pt-3">
                   When you wallet is set up, connect it to our website using the
                   'Connect Wallet' button (top right).
                 </p>
                 <p className="pt-6 text-xl font-bold text-left left-0">
                   3) Claim your NFT
                 </p>
-                <p className="px-8 pt-3">
+                <p className="px-2 lg:px-6 pt-3">
                   Click 'Claim Your NFT', and sign the transaction using your
                   metamask wallet. The token will be automatically transferred
                   into your account. It may take up to 10 minutes for this
@@ -176,7 +195,33 @@ export default function Home() {
                   out to us and we'll see if we can help.
                 </p>
               </div>
-              <div className="absolute bottom-0 -translate-y-16">
+              <div className="mt-8">
+                <p className=" text-lg font-bold">The Claim Button...</p>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  className="flex mx-auto mt-4 translate-y-0 animate-bounce"
+                  stroke="#67e8f9"
+                  strokeWidth="3px"
+                >
+                  <path d="M12 21l-12-18h24z" />
+                </svg>
+              </div>
+            </div>
+            <div className=" snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-12 w-full">
+                <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
+                  The Claim Button
+                </p>
+                <p className="flex mx-auto text-center justify-center py-4">
+                  Please Enter your Claim Code from Email below.
+                </p>
+                <input type="text" className="" />
+              </div>
+              <div className="mt-8">
                 <p className=" text-lg font-bold">Congratulations!!!</p>
 
                 <svg
@@ -192,16 +237,13 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className="relative snap-start bg-black w-full h-156 flex flex-col text-center items-center justify-center text-base px-36">
-              <div className="-mt-8 w-full relative">
-                <p className="text-3xl font-bold absolute -top-12 -left-6">
+            <div className=" snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-12 w-full ">
+                <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   Congratulations! Now What?
                 </p>
-                <span className="bg-yggpurple-300 h-px w-96 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-96 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-96 absolute -translate-y-2 top-0 -left-6"></span>
 
-                <p className="pt-6 leading-relaxed">
+                <p className="pt-6 leading-tight lg:leading-relaxed">
                   Now that you hold an Anthromancer NFT, you will be eligible to
                   receive discounts on future Anthromancer NFT drops, early
                   access to beta testing for chain-based games and apps we
@@ -210,7 +252,7 @@ export default function Home() {
                   you have to do is protect your wallet and seed phrase, and
                   keep the token safe within it.
                 </p>
-                <p className="pt-6 leading-relaxed">
+                <p className="pt-6 leading-tight lg:leading-relaxed">
                   You are also free to sell your token on a marketplace such as
                   Opensea.io, to trade it for other tokens via a service such as
                   sudoswap, to display it in a virtual gallery such as
@@ -228,8 +270,8 @@ export default function Home() {
                   along; we look forward to the next time we can play together.
                 </p>
               </div>
-              <div className="absolute bottom-0 -translate-y-16">
-                <p className=" text-lg font-bold">
+              <div className="mt-8">
+                <p className="text-lg font-bold ">
                   What's next for Anthromancer?
                 </p>
 
@@ -246,25 +288,12 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className="snap-start bg-black w-full h-156 flex flex-col text-center items-center justify-center text-base px-36">
-              <div className="-mt-8 w-full relative">
-                <p className="text-3xl font-bold absolute -top-12 -left-6">
+            <div className="snap-start bg-black w-full h-screen lg:h-156 flex flex-col text-center items-center justify-center text-base px-3 lg:px-36">
+              <div className="-mt-8 w-full ">
+                <p className="text-3xl font-bold text-left underline underline-offset-2 decoration-yggpurple-300">
                   What's Next for Anthromancer?
                 </p>
-                <span className="bg-yggpurple-300 h-px w-72 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-72 absolute -translate-y-2 top-0 -left-6"></span>
-                <span className="bg-yggpurple-300 h-px w-72 absolute -translate-y-2 top-0 -left-6"></span>
 
-                <p className="pt-6">
-                  <span className="italic">"What IS this place?"</span> Roxas
-                  asks, gazing up into the branches of the pale tree...
-                </p>
-                <p className="pt-6">
-                  <span className="italic">
-                    "It is the place beyond the place,"
-                  </span>{" "}
-                  the Fox replies,{" "}
-                </p>
                 <p className="pt-6 leading-relaxed">
                   In the following months and years Anthromancer will release a
                   series of NFT projects which will connect a strong community
@@ -276,12 +305,12 @@ export default function Home() {
                   you'’'d like to know more about our mid- and long-term vision,
                   we invite you to take a look at our Road Map.
                 </p>
-                <span className="italic">
+                <p className="italic mt-4 ">
                   This is Anthromancer. We are pleased to Welcome You to The
                   Enlightenment Machine.
-                </span>
+                </p>
               </div>
-              <div className="hidden absolute bottom-0 -translate-y-16">
+              <div className="hidden bottom-0 -translate-y-16">
                 <p className=" text-xl font-bold">
                   5. What's next for Anthromancer ..?
                 </p>
@@ -300,7 +329,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-4/12 text-center mx-auto">
+          <div className=" hidden lg:flex flex-col lg:w-4/12 text-center mx-auto">
             <div className="w-8/12 flex mx-auto rounded-lg mt-4">
               <img id="NFT" src="/yggdrasil.png" />
             </div>

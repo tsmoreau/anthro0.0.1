@@ -210,7 +210,7 @@ export default function IndexPage() {
           {show ? (
             <div className="h-px -mt-0.5"></div>
           ) : (
-            <div className="font-molle text-2xl py-4  px-6 w-full flex lg:hidden justify-between items-center backdrop-filter backdrop-blur-sm bg-opacity-0 top-0 z-40">
+            <div className="font-molle text-2xl py-4 bg-black px-6 w-full flex lg:hidden justify-between items-center  top-0 z-40">
               <div className="-mb-2">
                 <a
                   href="/"
@@ -235,7 +235,7 @@ export default function IndexPage() {
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="white"
-                      fill="none"
+                      fill="white"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
@@ -252,7 +252,7 @@ export default function IndexPage() {
                       height={24}
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
-                      stroke="currentColor"
+                      stroke="white"
                       fill="none"
                       strokeLinecap="round"
                       strokeLinejoin="round"
