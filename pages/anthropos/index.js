@@ -1,55 +1,42 @@
-import { verifyMessage } from "@ethersproject/wallet";
 import { useWeb3React } from "@web3-react/core";
 import Head from "next/head";
 import Link from "next/link";
-import Account from "../components/Utils/Account";
-import Nav from "../components/Layout/Nav";
-import Footer from "../components/Layout/Footer";
-
-import ETHBalance from "../components/Utils/ETHBalance";
-import useEagerConnect from "../hooks/useEagerConnect";
-import usePersonalSign, { hexlify } from "../hooks/usePersonalSign";
+import Account from "../../components/Utils/Account";
+import Nav from "../../components/Layout/Nav";
+import Footer from "../../components/Layout/Footer";
+import useEagerConnect from "../../hooks/useEagerConnect";
 
 export default function Home() {
   const { account, library } = useWeb3React();
 
   const triedToEagerConnect = useEagerConnect();
 
-  const sign = usePersonalSign();
-
-  const handleSign = async () => {
-    const msg = "Whitelisted for Anthropos";
-    const sig = await sign(msg);
-    console.log(sig);
-    console.log("isValid", verifyMessage(msg, sig) === account);
-  };
-
   const isConnected = typeof account === "string" && !!library;
 
   return (
     <div>
       <Head>
-        <title>Anthromancer - Home</title>
+        <title>Anthromancer - Anthropos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-black ">
+      <main className="bg-black text-white">
         <Nav />
-        <div className="py-4 h-screen">
-          <div class="circle-container"></div>
 
-          <p className="font-mono text-3xl pt-24 text-white">ANTHROMANCER</p>
-
-          {isConnected && (
-            <section>
-              <button
-                className="w-64 font-bold text-sm p-4 border text-white"
-                onClick={handleSign}
-              >
-                Mint Anthropos Token
-              </button>
-            </section>
-          )}
+        <div className="py-4">
+          <a href="/" className="font-mono text-3xl pt-12">
+            web3
+          </a>
+        </div>
+        <div className="py-4">
+          <a href="/web3/drops" className="font-mono text-base">
+            Drops
+          </a>
+        </div>
+        <div className="py-4">
+          <a href="/web3/resources" className="font-mono text-base">
+            Resources
+          </a>
         </div>
       </main>
       <Footer />

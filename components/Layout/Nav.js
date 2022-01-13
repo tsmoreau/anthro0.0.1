@@ -285,7 +285,7 @@ export default function IndexPage() {
         <div>
           <nav className="h-12 items-center text-center font-molle text-base hidden lg:flex py-4 shadow-none  px-6 w-full flex justify-between bg-black top-0 z-40">
             <div className="flex h-10  translate-y-0">
-              <a href="/" className="w-116">
+              <a href="/" className="w-96 -mb-4">
                 <img src="/logo.png" />
               </a>
               <div className="font-mono w-min flex mx-auto p-2 mt-0.5 translate-y-1.5 ">
