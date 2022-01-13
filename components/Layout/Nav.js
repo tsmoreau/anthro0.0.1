@@ -5,6 +5,64 @@ import { useWeb3React } from "@web3-react/core";
 import { Popover } from "@headlessui/react";
 import Alert from "./Alert";
 
+function CodexDropdown() {
+  return (
+    <div className="mx-2 text-base text-white">
+      <Popover className="relative">
+        <Popover.Button className="flex items-center text-white transition ease-in-out hover:-translate-y-0.5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8"
+            height="8"
+            viewBox="0 0 24 24"
+            className="mx-1 mt-1 text-cyan-300"
+            stroke="#67e8f9"
+            strokeWidth="3px"
+          >
+            <path d="M12 21l-12-18h24z" />
+          </svg>
+          codex
+        </Popover.Button>
+
+        <Popover.Panel className="z-40 w-48 -translate-x-0  translate-y-3 border absolute z-10 bg-black">
+          <div className="flex flex-col">
+            <a className="w-full py-4 hover:bg-yggpurple-300 " href="/">
+              News
+            </a>
+            <a className="w-full py-4 hover:bg-yggpurple-300 " href="/">
+              Podcast
+            </a>
+            <a className="w-full py-4 hover:bg-yggpurple-300 " href="/">
+              Universe
+            </a>
+            <a className="w-full py-4 hover:bg-yggpurple-300 " href="/">
+              Hymns
+            </a>
+            <a className="w-full py-4 hover:bg-yggpurple-300 " href="/">
+              Web3 Resources
+            </a>
+            <a className="w-full py-4 hover:bg-yggpurple-300 " href="/">
+              FAQ
+            </a>
+          </div>
+        </Popover.Panel>
+      </Popover>
+    </div>
+  );
+}
+
+function GamesDropdown() {
+  return <div></div>;
+}
+
+function TokensDropdown() {
+  return <div></div>;
+}
+
+function ProfileDropdown() {
+  return <div></div>;
+}
+
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
@@ -90,16 +148,12 @@ export default function IndexPage() {
                     </div>
                   </div>
                   <ul className="f-m-m">
-                    <a href="/" className="cursor-pointer">
-                      <li className="text-gray-800 pt-6">
-                        <div className="flex items-center">
-                          <div className="text-indigo-700"></div>
-                          <p className="font-mono px-3 py-4 flex text-white text-center items-center text-sm leading-snug transition duration-100 ease-in-out transform hover:-translate-y-1">
-                            codex
-                          </p>
-                        </div>
-                      </li>
-                    </a>
+                    <li className="text-gray-800 pt-10">
+                      <div className="flex items-center">
+                        <CodexDropdown />
+                      </div>
+                    </li>
+
                     <a href="/" className="cursor-pointer">
                       <li className=" text-gray-800 pt-1">
                         <div className="flex items-center justify-between">
@@ -118,7 +172,7 @@ export default function IndexPage() {
                         <div className="flex items-center">
                           <div className="text-gray-800"></div>
                           <p className="font-mono px-3 py-4 flex text-white text-center items-center text-sm leading-snug transition duration-100 ease-in-out transform hover:-translate-y-1">
-                            web3
+                            tokens
                           </p>
                         </div>
                       </li>
@@ -235,53 +289,7 @@ export default function IndexPage() {
                 <img src="/logo.png" />
               </a>
               <div className="font-mono w-min flex mx-auto p-2 mt-0.5 translate-y-1.5 ">
-                <div className="mx-2 text-base text-white">
-                  <Popover className="relative">
-                    <Popover.Button className="flex items-center text-white transition ease-in-out hover:-translate-y-0.5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8"
-                        height="8"
-                        viewBox="0 0 24 24"
-                        className="mx-1 mt-1 text-cyan-300"
-                        stroke="#67e8f9"
-                        strokeWidth="3px"
-                      >
-                        <path d="M12 21l-12-18h24z" />
-                      </svg>
-                      codex
-                    </Popover.Button>
-
-                    <Popover.Panel className="z-40 w-48 -translate-x-24  translate-y-3 border absolute z-10 bg-black">
-                      <div className="flex flex-col">
-                        <a
-                          className="w-full py-4 hover:bg-yggpurple-300 "
-                          href="/"
-                        >
-                          Universe
-                        </a>
-                        <a
-                          className="w-full py-4 hover:bg-yggpurple-300 "
-                          href="/"
-                        >
-                          Hymns
-                        </a>
-                        <a
-                          className="w-full py-4 hover:bg-yggpurple-300 "
-                          href="/"
-                        >
-                          Blog
-                        </a>
-                        <a
-                          className="w-full py-4 hover:bg-yggpurple-300 "
-                          href="/"
-                        >
-                          Podcast
-                        </a>
-                      </div>
-                    </Popover.Panel>
-                  </Popover>
-                </div>
+                <CodexDropdown />
                 <div className="mx-2 text-base text-white">
                   <Popover className="relative">
                     <Popover.Button className="flex items-center transition ease-in-out hover:-translate-y-0.5">
@@ -327,31 +335,31 @@ export default function IndexPage() {
                       >
                         <path d="M12 21l-12-18h24z" />
                       </svg>
-                      web3
+                      tokens
                     </Popover.Button>
 
                     <Popover.Panel className="z-40 border border-ygg-purple-300 w-48 absolute -translate-x-16 translate-y-3 z-10 bg-black">
                       <div className="flex flex-col ">
                         <a
                           className="w-full py-4 hover:bg-yggpurple-300 "
-                          href="/web3/drops"
+                          href="/web3/drops/yggdrasil"
                         >
-                          Drops
+                          Yygdrasil
                         </a>
                         <a
                           className="w-full py-4 hover:bg-yggpurple-300 "
-                          href="/web3/drops"
+                          href="/web3/drops/anthropos"
                         >
-                          Games
+                          Anthropos
                         </a>
                         <a className="hidden py-4" href="/">
-                          Token Market
+                          MDX
                         </a>
                         <a
                           className="w-full py-4 hover:bg-yggpurple-300 "
-                          href="/web3/resources"
+                          href="/"
                         >
-                          FAQ
+                          Token Market
                         </a>
                       </div>
                     </Popover.Panel>
@@ -359,7 +367,6 @@ export default function IndexPage() {
                 </div>
               </div>
             </div>
-            <div className="text-9xl">etst</div>
 
             {isConnected ? (
               <div className="text-white">

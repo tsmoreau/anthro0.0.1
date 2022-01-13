@@ -72,7 +72,10 @@ const Account = ({ triedToEagerConnect }) => {
               : "Connect Wallet"}
           </button>
         ) : (
-          <button onClick={() => onboarding.current?.startOnboarding()}>
+          <button
+            className="text-white"
+            onClick={() => onboarding.current?.startOnboarding()}
+          >
             Install Metamask
           </button>
         )}

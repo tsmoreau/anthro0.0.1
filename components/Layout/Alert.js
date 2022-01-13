@@ -2,7 +2,7 @@ export default function IndexPage() {
   return (
     <div>
       <div className="cursor-pointer text-xs font-mono w-full flex mx-auto justify-center text-center items-center h-7 bg-black text-white">
-        <div className="cursor-pointer text-xs font-mono w-full flex mx-auto justify-center text-center items-center h-7 bg-yggpurple-300 text-white rounded-full mx-4">
+        <div className="cursor-pointer text-xs font-mono w-full flex mx-auto justify-center text-center items-center h-7 bg-yggpurple-300 text-white rounded-md mx-1.5">
           <div className="border px-2 mt-0.5 mb-0.5 pt-0.5 animate-pulse flex  bg-puple-200 rounded-full">
             <svg
               width="14"
